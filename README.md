@@ -19,5 +19,10 @@
 
 ### Create a new Watson Studio Project
 
-1. On IBM Cloud create a new [Watson Studio](https://cloud.ibm.com/catalog/services/watson-studio)
+* On IBM Cloud create a new [Watson Studio](https://cloud.ibm.com/catalog/services/watson-studio)
 
+  ![](doc/src/gif/Create_Watson_Studio.gif)
+  
+* Make sure to set the location to `Dallas`, select the appropriate plan and hit Create.
+* Go to your [IBM CLoud Dashboard](https://cloud.ibm.com/)
+* Click on `resources>services` select your Watson Studio Service and click on `Get Started`.
