@@ -26,4 +26,17 @@
 * Make sure to set the location to `Dallas`, select the appropriate plan and hit Create.
 * Go to your [IBM Cloud Dashboard](https://cloud.ibm.com/)
 * Click on `resources>services` select your Watson Studio Service and click on `Get Started`.
-* 
+  
+  ![](doc/src/gif/Create_Project.gif)
+  
+* If you don't have a Cloud Object Storage Instance then follow the onscreen steps to create a new Cloud Object Storage Instance.
+
+### Add a new Watson Machine Learning Model
+
+* Click on `Add to Project` and select `Watson Machine Learning` option.
+* If you already have a WML instance, make sure it is in the `Dallas` region. If not, follow the steps as below-
+
+
+
+
+
