@@ -14,7 +14,7 @@
 7. [Configure Credentials in your Notebook]()
 8. [Run the Inital Scoring and Payload Logging]()
 9. [Configure the Quality and Fairness Monitors on Watson OpenScale]()
-10.[Add Feedback Data to setup your dashboard on Watson OpenScale]()
+10. [Add Feedback Data to setup your dashboard on Watson OpenScale]()
 
 
 ### Create a new Watson Studio Project
@@ -24,5 +24,6 @@
   ![](doc/src/gif/Create_Watson_Studio.gif)
   
 * Make sure to set the location to `Dallas`, select the appropriate plan and hit Create.
-* Go to your [IBM CLoud Dashboard](https://cloud.ibm.com/)
+* Go to your [IBM Cloud Dashboard](https://cloud.ibm.com/)
 * Click on `resources>services` select your Watson Studio Service and click on `Get Started`.
+* 
