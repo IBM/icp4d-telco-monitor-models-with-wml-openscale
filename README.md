@@ -47,5 +47,22 @@
 
 ### 3. Build your own Machine Learning Model with WML Model Builder
 
-* 
+* Clone the repo using the `Clone or Download` button or by typing the below command in a desired directory in your command line.
 
+```
+    git clone https://github.com/IBM/icp4d-telco-monitor-models-with-wml-openscale.git
+```
+* In your IBM Cloud, open the created model. Click on `Add Data Assets`. Navigate to the `dataset` folder in the downloaded repo, add the file and select the file. 
+
+  ![](doc/src/images/add_data.png)
+  
+* Once your dataset is loaded, setup the Target Column, Feature Column, Type of Classification or Regeression and an Estimator.
+
+  ![](doc/src/gif/Create_Model.gif)
+  
+```
+  Note: The parameters you set will be different from the above steps, in case of a different dataset and use-case.
+```
+* Once the model is trained click on `Save` and store your model.
+
+  
