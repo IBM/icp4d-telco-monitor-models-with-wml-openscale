@@ -17,7 +17,7 @@
 10. [Add Feedback Data to setup your dashboard on Watson OpenScale]()
 
 
-### Create a new Watson Studio Project
+### 1. Create a new Watson Studio Project
 
 * On IBM Cloud create a new [Watson Studio](https://cloud.ibm.com/catalog/services/watson-studio)
 
@@ -32,12 +32,20 @@
   
 * If you don't have a Cloud Object Storage Instance then follow the onscreen steps to create a new Cloud Object Storage Instance.
 
-### Add a new Watson Machine Learning Model
+### 2. Add a new Watson Machine Learning Model
 
 * Click on `Add to Project` and select `Watson Machine Learning` option.
 * If you already have a WML instance, make sure it is in the `Dallas` region. If not, follow the steps as below-
   ![](doc/src/gif/Create_WML.gif)
 
 ```Note: Ensure your WML region is Dallas```
+* Select `model type> model builder`
+* Select `runtime> Default Spark Scala 2.11`
+* Select the `Manual` option
+  ![](doc/src/images/create_model.png)
+* Give your model a name and hit create.
 
+### 3. Build your own Machine Learning Model with WML Model Builder
+
+* 
 
