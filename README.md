@@ -116,4 +116,7 @@
   * Insert the Pandas Dataframe of the Training Data
     ![](doc/src/images/Insert_data.gif)
     
- 
+  * Run the Notebook.
+    ``` Add Details on Notebook running
+    ```
+  * Go back to Watson OpenScale and click on `I'm Finished`
