@@ -26,6 +26,7 @@
 * Make sure to set the location to `Dallas`, select the appropriate plan and hit Create.
 * Go to your [IBM Cloud Dashboard](https://cloud.ibm.com/)
 * Click on `resources>services` select your Watson Studio Service and click on `Get Started`.
+* Create a new Project as shown below-
   
   ![](doc/src/gif/Create_Project.gif)
   
@@ -35,8 +36,8 @@
 
 * Click on `Add to Project` and select `Watson Machine Learning` option.
 * If you already have a WML instance, make sure it is in the `Dallas` region. If not, follow the steps as below-
+  ![](doc/src/gif/Create_WML.gif)
 
-
-
+```Note: Ensure your WML region is Dallas```
 
 
