@@ -95,7 +95,7 @@
   
 * Click on `Configure Monitors`. Select the appropriate data type and algorithm type, according to your custom model. If you are using the same dataset as our example, follow the below steps-
  
-    ![](doc/src/images/configure_payload.gif)
+   ![](doc/src/images/configure_payload.gif)
   
  
  ### 5. Create a new Watson Studio Python Notebook on IBM Cloud
@@ -108,12 +108,15 @@
   ### Configure Credentials
   * Open your WML instance from your IBM Cloud Dashboard.
   * Go to `Service Credentials` tab, click on `View Credentials` and copy it.
-    ![](doc/src/images/wml_cred.png)
+  
+   ![](doc/src/images/wml_cred.png)
+   
   * Open your Watson Studio notebook-
   * Paste the copied credentials in the `WML_CREDENTIALS` variable.
   
  ### 8. Run the Inital Scoring and Payload Logging
   * Insert the Pandas Dataframe of the Training Data
+  
     ![](doc/src/images/Insert_data.gif)
     
   * Run the Notebook.
