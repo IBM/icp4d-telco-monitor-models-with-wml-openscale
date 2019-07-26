@@ -8,13 +8,14 @@
 1. [Create a new Watson Studio Project]()
 2. [Add a new Watson Machine Learning Model]()
 3. [Build your own Machine Learning Model with WML Model Builder]()
-4. [Save and Deploy your WML Model]()
-5. [Create a new Watson OpenScale instance on IBM Cloud]()
-6. [Create a new Watson Studio Python Notebook]()
-7. [Configure Credentials in your Notebook]()
-8. [Run the Inital Scoring and Payload Logging]()
-9. [Configure the Quality and Fairness Monitors on Watson OpenScale]()
-10. [Add Feedback Data to setup your dashboard on Watson OpenScale]()
+4. [Create a new Watson OpenScale instance on IBM Cloud]()
+5. [Create a new Watson Studio Python Notebook on IBM Cloud]()
+6. [Launch the Watson OpenScale add-on on IBM Cloud Pak for Data]()
+7. [Create a new Project in your IBM Cloud Pak for Data instance]()
+8. [Configure Credentials in your Notebook]()
+9. [Run the Inital Scoring and Payload Logging]()
+10. [Configure the Quality and Fairness Monitors on Watson OpenScale]()
+11. [Add Feedback Data to setup your dashboard on Watson OpenScale]()
 
 
 ### 1. Create a new Watson Studio Project
@@ -45,7 +46,7 @@
   ![](doc/src/images/create_model.png)
 * Give your model a name and hit create.
 
-### 3. Build your own Machine Learning Model with WML Model Builder
+### 3. Build and Deploy your own Machine Learning Model with WML Model Builder
 
 * Clone the repo using the `Clone or Download` button or by typing the below command in a desired directory in your command line.
 
@@ -64,5 +65,27 @@
   Note: The parameters you set will be different from the above steps, in case of a different dataset and use-case.
 ```
 * Once the model is trained click on `Save` and store your model.
+* To Deploy the created model, go to `Deployments>Add a Deployment`
+
+  ![](doc/src/gif/Create_Deployment.gif)
+
+```
+  Note: 
+      1. If you are using IBM Cloud follow steps 4-5 and then continue with step 8
+      2. If you are using IBM Cloud Pak for Data ignore next few steps and start from step 6
+  
+```
 
   
+### 4. Create a new Watson OpenScale instance on IBM Cloud
+
+* In your IBM Cloud, create an new [Watson OpenScale Instance](https://cloud.ibm.com/catalog/services/watson-openscale)
+* Configure the Db for OpenScale. In this we use a Free-Lite Plan, you may choose any other db depending on your requirement.
+
+  ![](doc/src/gif/db_conf.gif)
+  
+* Bind your created WML instance to OpenScale, following the on-screen instructions as shown below-
+
+  ![](doc/src/gif/WML_create.gif)
+  
+ * Click on `Go to Dashboard`. Then select `Add Deployments`
