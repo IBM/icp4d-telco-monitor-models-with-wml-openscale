@@ -136,7 +136,7 @@
   
   For the example, follow the on-screen instructions and set the configuration as shown below-
   
-    ![](doc/src/gif/Set_Fairness.png)
+   ![](doc/src/images/Set_Fairness.png)
   
 ### 10. Add Feedback Data to setup your dashboard on Watson OpenScale
 
