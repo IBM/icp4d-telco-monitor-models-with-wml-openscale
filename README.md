@@ -118,11 +118,29 @@
   
     ![](doc/src/images/Insert_data.gif)
     
-  * Run the Notebook.
+  * Run the Notebook. 
     ``` Add Details on Notebook running
     ```
+    
   * Go back to Watson OpenScale and click on `I'm Finished`
 
 ### 9. Configure the Quality and Fairness Monitors on Watson OpenScale
 
+  * Setup the Quality Monitor. This Quality Monitor has a threshold accuracy value that can be set to give an alert, if your model doesn't give a an accuracy below a certain level.
+  
+    ![](doc/src/gif/quality_monitor.gif)
+ * For this example, setup the `Quality Threshold`, `Minimum Sample Size` and `Maximum Sample Size` as shown below:
+ 
+    ![](doc/src/images/quality_monitor.png)
+  * The Watson OpenScale, monitors the intricate bias that creeps into your model. We can choose which fields we want to monitor and set up a `Fairness Threshold` which will raise an alert beyond a certain value. 
+  
+  For the example, follow the on-screen instructions and set the configuration as shown below-
+  
+    ![](doc/src/gif/Set_Fairness.png)
+  
 ### 10. Add Feedback Data to setup your dashboard on Watson OpenScale
+
+* Once you have setup all the monitors, you can add `Feedback Data` by following the steps below-
+
+  ![](doc/src/gif/send_feedback.gif)
+* Navigate to this cloned repo, `Dataset>TowerC_Feedback.csv`.
