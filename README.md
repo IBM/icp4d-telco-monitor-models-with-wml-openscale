@@ -123,3 +123,7 @@
     ``` Add Details on Notebook running
     ```
   * Go back to Watson OpenScale and click on `I'm Finished`
+
+### 9. Configure Credentials
+
+  * 
