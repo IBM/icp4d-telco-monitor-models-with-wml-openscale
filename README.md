@@ -13,10 +13,9 @@
 5. [Create a new Watson Studio Python Notebook on IBM Cloud]()
 6. [Launch the Watson OpenScale add-on on IBM Cloud Pak for Data]()
 7. [Create a new Project in your IBM Cloud Pak for Data instance]()
-8. [Configure Credentials in your Notebook]()
-9. [Run the Inital Scoring and Payload Logging]()
-10. [Configure the Quality and Fairness Monitors on Watson OpenScale]()
-11. [Add Feedback Data to setup your dashboard on Watson OpenScale]()
+8. [Run the Inital Scoring and Payload Logging]()
+9. [Configure the Quality and Fairness Monitors on Watson OpenScale]()
+10. [Add Feedback Data to setup your dashboard on Watson OpenScale]()
 
 
 ### 1. Create a new Watson Studio Project
@@ -54,7 +53,7 @@
 ```
     git clone https://github.com/IBM/icp4d-telco-monitor-models-with-wml-openscale.git
 ```
-* In your IBM Cloud, open the created model. Click on `Add Data Assets`. Navigate to the `dataset` folder in the downloaded repo, add the file and select the file. 
+* In your IBM Cloud, open the created model. Click on `Add Data Assets`. Navigate to the [dataset](https://github.com/IBM/icp4d-telco-monitor-models-with-wml-openscale/blob/master/dataset/TowerC_train.csv) folder in the downloaded repo, add the file and select the file. 
 
   ![](doc/src/images/add_data.png)
   
@@ -124,6 +123,6 @@
     ```
   * Go back to Watson OpenScale and click on `I'm Finished`
 
-### 9. Configure Credentials
+### 9. Configure the Quality and Fairness Monitors on Watson OpenScale
 
-  * 
+### 10. Add Feedback Data to setup your dashboard on Watson OpenScale
