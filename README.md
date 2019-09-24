@@ -32,9 +32,9 @@ In this Code Pattern we demonstrate a way to Monitor your AI models in an applic
 
 
 ## Steps
-1. [Create a new Project on your Cloud Pak for Data instance](1-create-a-new-project-on-your-cloud-pak-for-data-instance)
-2. [Add a new Watson Machine Learning Instance](2-add-a-new-watson-machine-learning-instance)
-3. [Create a new Python Notebook on your Cloud Pak for Data Project](3-create-a-new-python-notebook-on-your-cloud-pak-for-data-project)
+1. [Create a new Project on your Cloud Pak for Data instance](#1-create-a-new-project-on-your-cloud-pak-for-data-instance)
+2. [Add a new Watson Machine Learning Instance](#2-add-a-new-watson-machine-learning-instance)
+3. [Create a new Python Notebook on your Cloud Pak for Data Project](#3-create-a-new-python-notebook-on-your-cloud-pak-for-data-project)
 4. [Configure your Python Notebook on Cloud Pak for Data](#4-configure-your-python-notebook-on-cloud-pak-for-data)
 5. [View your Watson OpenScale Dashboard on Cloud Pak for Data]()
 
