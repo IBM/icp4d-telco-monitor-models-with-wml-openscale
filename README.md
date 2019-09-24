@@ -33,14 +33,10 @@ In this Code Pattern we demonstrate a way to Monitor your AI models in an applic
 
 ## Steps
 1. [Create a new Project on your Cloud Pak for Data instance](1-create-a-new-project-on-your-cloud-pak-for-data-instance)
-2. [Add a new Watson Machine Learning Model]()
-3. [Create a new Python Notebook on your Cloud Pak for Data Project]()
-4. [Configure Watson OpenScale on Cloud Pak for Data]()
-7. [Create a new Project in your IBM Cloud Pak for Data instance]()
-8. [Run the Inital Scoring and Payload Logging]()
-9. [Configure the Quality and Fairness Monitors on Watson OpenScale]()
-10. [Add Feedback Data to setup your dashboard on Watson OpenScale]()
-
+2. [Add a new Watson Machine Learning Instance](2-add-a-new-watson-machine-learning-instance)
+3. [Create a new Python Notebook on your Cloud Pak for Data Project](3-create-a-new-python-notebook-on-your-cloud-pak-for-data-project)
+4. [Configure your Python Notebook on Cloud Pak for Data](#4-configure-your-python-notebook-on-cloud-pak-for-data)
+5. [View your Watson OpenScale Dashboard on Cloud Pak for Data]()
 
 ### 1. Create a new Project on your Cloud Pak for Data instance
 
@@ -49,7 +45,7 @@ In this Code Pattern we demonstrate a way to Monitor your AI models in an applic
    
 * When you reach the Project list, click on `New Project`. You will get a pop-up, make sure to have the `Analytics Project` option and enter the desired name. Once you click on `Ok` you will go to a new screen. Click on `Create` to complete your project creation.
 
-### 2. Add a new Watson Machine Learning Model
+### 2. Add a new Watson Machine Learning Instance
 
 * Create a new [Watson Machine Learning](https://cloud.ibm.com/catalog/services/machine-learning) instance on IBM Cloud. Log in to IBM Cloud or sign up for IBM Cloud if you don't have an account by following the on-screen instructions.
 
@@ -72,7 +68,7 @@ NOTE: Save the credentials. It will be required during the later stages.
   ![](doc/src/images/url_notebook.png)
   
 
-### 4. Configure your Python Notebook
+### 4. Configure your Python Notebook on Cloud Pak for Data
 
  ```
  Note: The following steps are very important. Be sure to not miss any of them. Also, it is recommended that you run each cell one by one in the notebook.
@@ -119,8 +115,7 @@ NOTE: Save the credentials. It will be required during the later stages.
   * You will find this id in the table above, as instructed in the notebook.
   * Now, run the rest of the notebook till the end.
     
- 
 
-## Sample Output
+## 5. View your Watson OpenScale Dashboard on Cloud Pak for Data
 
 
