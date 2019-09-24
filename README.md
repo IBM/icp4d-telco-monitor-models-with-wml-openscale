@@ -17,7 +17,8 @@ In this Code Pattern we demonstrate a way to Monitor your AI models in an applic
   * How to create a project and setup a python notebook on Cloud Pak for Data.
   
 ## Pre-requisites
-* [IBM Cloud Pak for Data]() (Srikanth fill)
+* [IBM Cloud Pak for Data](https://www.ibm.com/in-en/products/cloud-pak-for-data) 
+* [OpenScale add-on for Cloud Pak for Data](https://cloud.ibm.com/docs/services/ai-openscale-icp?topic=ai-openscale-icp-inst-install-icp )
 
 ## Architecture Diagram
   
@@ -65,66 +66,60 @@ NOTE: Save the credentials. It will be required during the later stages.
 
  * Go back to your Cloud Pak for Data Project Landing Page.
  * Click on `Notebook>Add Notebook`.
+  ![](doc/src/gif/createnotebook.gif)
  * Go to the `From URL` tab and enter the notebook URL- https://github.com/IBM/icp4d-telco-monitor-models-with-wml-openscale/blob/master/notebook/Setup_your_AIOS_Dashboard.ipynb
-  ``` Attach one Screenshot
-  ```
-  ### Configure Credentials
-  * Open your Watson Studio notebook-
-  * Paste the copied credentials in the previous step in the `WML_CREDENTIALS` variable (Update according to notebook).
-
-  ``` Attach one Screenshot
-  ```
-
-### 4. Configure Watson OpenScale on Cloud Pak for Data
-
- * Open a Watson Openscale add-on on Cloud Pak for Data. Click on the `add-on` icon on top right of the instance, and the click on `options>Open` for OpenScale Add-on.
+ 
+  ![](doc/src/images/url_notebook.png)
   
-  ![](doc/src/gif/openopenscale.gif)
- 
- * Click on `Configure>Database`. Add your Db2 Cloud credentials or your internal db credentials on Cloud Pak for Data.
- 
-  ![](doc/src/gif/db2_cred.png)
 
-```
-  Note:
-    1. If you are adding Db2 on Cloud, ensure you have a Standard Plan and you select the Dallas Region
-    2. Create an Empty Schema in your Db. OpenScale will NOT recognise schemas that already have some data.
-```
- * Click on `Machine learning providers`. Click on `Add Machine Learning Providers`. Enter the `WML Credentials` that you had copied in an earlier step. Click on `Save`.
+### 4. Configure your Python Notebook
+
+ ```
+ Note: The following steps are very important. Be sure to not miss any of them. Also, it is recommended that you run each cell one by one in the notebook.
+ ```
  
+ 1. [Install the Necessary Packages](#4.1-install-the-necessary-packages)
+ 2. [Configure the Necessary Details](#4.2-configure-the-necessary-details)
+ 3. [Add the dataset](#4.3-add-the-dataset)
+ 4. [Add the subscription id](#4.4-add-the-subscription-id)
+ #### 4.1 Install the Necessary Packages
  
- ### 8. Run the Inital Scoring and Payload Logging
-  * Insert the Pandas Dataframe of the Training Data
-  
-    ![](doc/src/images/Insert_data.gif)
-    
-  * Run the Notebook. 
-    ``` Add Details on Notebook running
+ * Click on the `Run` icon and install the necessary packages given in each cell.
+ * Next, restart your kernel by either clicking the restart icon or `Kernel>Restart`.
+ 
+ #### 4.2 Configure the Necessary Details
+ 
+ * Under `Section 2.1 Global Variables` enter the following-
+    a) Your desired Model Name
+    b) Your desired Model Deployment Name
+    c) The name of an `empty` schema in your database
     ```
-    
-  * Go back to Watson OpenScale and click on `I'm Finished`
-
-### 9. Configure the Quality and Fairness Monitors on Watson OpenScale
-
-  * Setup the Quality Monitor. This Quality Monitor has a threshold accuracy value that can be set to give an alert, if your model doesn't give a an accuracy below a certain level.
-  
-    ![](doc/src/gif/quality_monitor.gif)
- * For this example, setup the `Quality Threshold`, `Minimum Sample Size` and `Maximum Sample Size` as shown below:
+    Note: Pls make sure you have an empty schema, ie has no content at all in it. 
+    ```
+ * Under `Section 2.3 Add your WML Credentials`. Add the credentials you had copied earlier in a previous step, while creating the instance.
+ * Under `Section 2.4 Update your AIOS Credentials`. Add the necessary instance details as instructed in the cell.
+    a) Replace the <> with the information within the brackets.
+ * Under `Section 2.5 Add your Db Credentials`. Add your db credentials and make sure the keys given in the template have     values filled in. (ie, hostname, username, db, port, etc.)
  
-    ![](doc/src/images/quality_monitor.png)
-  * The Watson OpenScale, monitors the intricate bias that creeps into your model. We can choose which fields we want to monitor and set up a `Fairness Threshold` which will raise an alert beyond a certain value. 
-  
-  For the example, follow the on-screen instructions and set the configuration as shown below-
-  
-   ![](doc/src/images/Set_Fairness.png)
-  
-### 10. Add Feedback Data to setup your dashboard on Watson OpenScale
+ #### 4.3 Add the Dataset
+ 
+ * Go back to your Project Landing Page. 
+ * Clone this repo, by clicking on `Clone or Download`, unzip it and navigate to the `datasets` folder.
+ * In your Project Page. Click on `Dataset>Add new Dataset> Browse`. Select the dataset downloaded.
+   ![](doc/src/gif/adddataset.gif)
+    
+ * Now, open your notebook again and click on the cell under `Section 2.2 Add Dataset`.
+ * Click on the `10/01` icon and select the `Insert to code` option. Under that select `Insert Pandas Dataframe` option.
+    ![](doc/src/image/add_dataset.png)
+    
+  #### 4.4 Add the Subscription Id
 
-* Once you have setup all the monitors, you can add `Feedback Data` by following the steps below-
-
-  ![](doc/src/gif/send_feedback.gif)
-* Navigate to this cloned repo, `Dataset>TowerC_Feedback.csv`.
-
+  * Now Start Running the notebook from `Section 1.2 till the end of Section 4.5`
+  * Before runnning the remaining (again, pls keep in mind it is better run cell by cell), update the variable `subscription_id` under `Section 2.6`, with id you have just created.
+  * You will find this id in the table above, as instructed in the notebook.
+  * Now, run the rest of the notebook till the end.
+    
+ 
 
 ## Sample Output
 
