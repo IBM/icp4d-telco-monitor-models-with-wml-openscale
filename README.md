@@ -119,4 +119,30 @@ NOTE: Save the credentials. It will be required during the later stages.
 
 ## 5. View your Watson OpenScale Dashboard on Cloud Pak for Data
 
+* Open the Watson Openscale add-on on Cloud Pak for Data. Click on the `add-on` icon on top right of the instance, and the click on `options>Open` for OpenScale Add-on.
+  
+  ![](doc/src/gif/openopenscale.gif)
+  
+* You will see a dashboard setup for your model. Below is a screenshot of more than one deployment of different towers of a similar dataset as given in this repo-
 
+  ![](doc/src/images/dashboard_initial.png)
+
+* Select the desired deployment the `options>View Details`. You will see a full Dashboard with various charts telling you how your model has been performing over various time intervals. Since we have only done an initial setup as of now you will have only one line in your charts.
+
+ ![](doc/src/images/Details.png)
+ 
+* Now select `_conds` as shown in the image above and hover over the graph. Select `Click to view details`. Select the timeline, according to your current date. You will get a graph as shown below-
+
+ ![](doc/src/images/bias.png)
+
+* Now click on `View Transactions`. You will see the list of each Transaction and where exactly it had found the bias.
+* Come back to the Dashboard and explore the `Area under ROC` section. Again hover over the graph and select `click to view details`.
+  
+ ![](doc/src/images/quality.png)
+ 
+* You will receive estimates and the configured quality montiors value, in this case as shown below-
+
+  ![](doc/src/images/quality_measures.png)
+  
+  
+  
