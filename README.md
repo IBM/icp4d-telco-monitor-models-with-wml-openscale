@@ -74,10 +74,11 @@ NOTE: Save the credentials. It will be required during the later stages.
  Note: The following steps are very important. Be sure to not miss any of them. Also, it is recommended that you run each cell one by one in the notebook.
  ```
  
- 1. [Install the Necessary Packages](#4.1-install-the-necessary-packages)
- 2. [Configure the Necessary Details](#4.2-configure-the-necessary-details)
- 3. [Add the dataset](#4.3-add-the-dataset)
- 4. [Add the subscription id](#4.4-add-the-subscription-id)
+ 1. [Install the Necessary Packages](#4-1-install-the-necessary-packages)
+ 2. [Configure the Necessary Details](#4-2-configure-the-necessary-details)
+ 3. [Add the dataset](#4-3-add-the-dataset)
+ 4. [Add the subscription id](#4-4-add-the-subscription-id)
+ 
  #### 4.1 Install the Necessary Packages
  
  * Click on the `Run` icon and install the necessary packages given in each cell.
