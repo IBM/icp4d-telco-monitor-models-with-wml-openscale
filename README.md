@@ -1,118 +1,98 @@
 # WORK IN PROGRESS
 # Monitor your ML Models using Watson OpenScale
 
+Businesses today are increasingly certain that AI will be a driving force in the evolution of their industries over the next few years. To successful infuse AI into your product or solution, there are many that factors that challenges its widespread adoption in the business and achieve their expected outcomes. A few listed below-
+
+  1. Building Trust- Organisations and businesses tend to be skeptical about AI because of its "black box" nature. Because of this many promising models don't go into production.
+  2. Algorithm bias- Another inherent problem with AI systems is that they are only as good – or as bad – as the data they are trained on. If the input data is filled with racial, gender, communal or ethnic biases your model's accuracy is going to eventually drift away.
+  3. Making Decisions Explainable- How can the model prove the reasoning behind the it's decision-making? It is critical that AI outcomes are fully explainable by keeping a complete track of inputs and outputs of any AI-powered application.  
+
+What if there is one console that makes it easier for business users to track and measure AI outcomes? 
+
+In this Code Pattern we demonstrate a way to Monitor your AI models in an application using Watson OpenScale. This will be demonstrated with an example of a Telecomm Call Drop Prediction Model. After the user has completed the code pattern, they will learn-
+
+  * How to store custom models using open source technology on Watson Machine Learning.
+  * How to deploy a model and connect the model deployment to Watson OpenScale on Cloud Pak for Data and on IBM Cloud.
+  * How to setup Model Fairness and Model Quality montiors and Watson OpenScale on Cloud Pak for Data and on IBM Cloud, using   python notebook.
+  * How to create a project and setup a python notebook on Cloud Pak for Data.
+  
 ## Pre-requisites
-* [IBM Cloud Pak for Data]() Or [IBM Cloud Account](https://cloud.ibm.com/)
+* [IBM Cloud Pak for Data]() (Srikanth fill)
+
+## Architecture Diagram
+  
+![](doc/src/images/Architecture_Diagram.png)
+
+1. Data stored into Cloud Pak for Data internal Db.
+2. The joined data is stored back to the Internal Db of Cloud Pak for Data and Assigned to the current working project.
+3. Create ML Models using Jupyter Python Notebooks to predict Call Drop, for one cell tower at a time.
+4. Model trained and/or stored in Watson Machine Learning, which is also connected to the AI OpenScale.
+5. Configure Fairness, Quality and Explainability Montiors for each Tower's model, present within Cloud Pak for Data or on other external Clouds (Multi-Cloud Architecture).
 
 
 ## Steps
-1. [Create a new Watson Studio Project]()
+1. [Create a new Project on your Cloud Pak for Data instance](1-create-a-new-project-on-your-cloud-pak-for-data-instance)
 2. [Add a new Watson Machine Learning Model]()
-3. [Build your own Machine Learning Model with WML Model Builder]()
-4. [Create a new Watson OpenScale instance on IBM Cloud]()
-5. [Create a new Watson Studio Python Notebook on IBM Cloud]()
-6. [Launch the Watson OpenScale add-on on IBM Cloud Pak for Data]()
+3. [Create a new Python Notebook on your Cloud Pak for Data Project]()
+4. [Configure Watson OpenScale on Cloud Pak for Data]()
 7. [Create a new Project in your IBM Cloud Pak for Data instance]()
 8. [Run the Inital Scoring and Payload Logging]()
 9. [Configure the Quality and Fairness Monitors on Watson OpenScale]()
 10. [Add Feedback Data to setup your dashboard on Watson OpenScale]()
 
 
-### 1. Create a new Watson Studio Project
+### 1. Create a new Project on your Cloud Pak for Data instance
 
-* On IBM Cloud create a new [Watson Studio](https://cloud.ibm.com/catalog/services/watson-studio)
-
-  ![](doc/src/gif/Create_Watson_Studio.gif)
-  
-* Make sure to set the location to `Dallas`, select the appropriate plan and hit Create.
-* Go to your [IBM Cloud Dashboard](https://cloud.ibm.com/)
-* Click on `resources>services` select your Watson Studio Service and click on `Get Started`.
-* Create a new Project as shown below-
-  
-  ![](doc/src/gif/Create_Project.gif)
-  
-* If you don't have a Cloud Object Storage Instance then follow the onscreen steps to create a new Cloud Object Storage Instance.
+* Once you login to your Cloud Pak for Data instance. Click on the `menu` icon in the top left corner of your screen and then click on `Projects`.
+   ![](doc/src/gif/gotoproject.gif)
+   
+* When you reach the Project list, click on `New Project`. You will get a pop-up, make sure to have the `Analytics Project` option and enter the desired name. Once you click on `Ok` you will go to a new screen. Click on `Create` to complete your project creation.
 
 ### 2. Add a new Watson Machine Learning Model
 
-* Click on `Add to Project` and select `Watson Machine Learning` option.
-* If you already have a WML instance, make sure it is in the `Dallas` region. If not, follow the steps as below-
-  ![](doc/src/gif/Create_WML.gif)
+* Create a new [Watson Machine Learning](https://cloud.ibm.com/catalog/services/machine-learning) instance on IBM Cloud. Log in to IBM Cloud or sign up for IBM Cloud if you don't have an account by following the on-screen instructions.
 
-```Note: Ensure your WML region is Dallas```
-* Select `model type> model builder`
-* Select `runtime> Default Spark Scala 2.11`
-* Select the `Manual` option
-  ![](doc/src/images/create_model.png)
-* Give your model a name and hit create.
-
-### 3. Build and Deploy your own Machine Learning Model with WML Model Builder
-
-* Clone the repo using the `Clone or Download` button or by typing the below command in a desired directory in your command line.
+* Select the location to `Dallas` region and hit create.
+  ![](doc/src/gif/createwml.gif)
+* Once the instance is created. Click on `Service Credentials`. Click on `New Credentials` and then click on `View Credentials`. Copy using the icon. 
+  ![](doc/src/gif/copycred.gif)
 
 ```
-    git clone https://github.com/IBM/icp4d-telco-monitor-models-with-wml-openscale.git
-```
-* In your IBM Cloud, open the created model. Click on `Add Data Assets`. Navigate to the [dataset](https://github.com/IBM/icp4d-telco-monitor-models-with-wml-openscale/blob/master/dataset/TowerC_train.csv) folder in the downloaded repo, add the file and select the file. 
-
-  ![](doc/src/images/add_data.png)
-  
-* Once your dataset is loaded, setup the Target Column, Feature Column, Type of Classification or Regeression and an Estimator.
-
-  ![](doc/src/gif/Create_Model.gif)
-  
-```
-  Note: The parameters you set will be different from the above steps, in case of a different dataset and use-case.
-```
-* Once the model is trained click on `Save` and store your model.
-* To Deploy the created model, go to `Deployments>Add a Deployment`
-
-  ![](doc/src/gif/Create_Deployment.gif)
-
-```
-  Note: 
-      1. If you are using IBM Cloud follow steps 4-5 and then continue with step 8
-      2. If you are using IBM Cloud Pak for Data ignore next few steps and start from step 6
-  
+NOTE: Save the credentials. It will be required during the later stages.
 ```
 
-  
-### 4. Create a new Watson OpenScale instance on IBM Cloud
+### 3. Create a new Python Notebook on your Cloud Pak for Data Project
 
-* In your IBM Cloud, create an new [Watson OpenScale Instance](https://cloud.ibm.com/catalog/services/watson-openscale)
-* Configure the Db for OpenScale. In this we use a Free-Lite Plan, you may choose any other db depending on your requirement.
-
-  ![](doc/src/gif/db_conf.gif)
-  
-* Bind your created WML instance to OpenScale, following the on-screen instructions as shown below-
-
-  ![](doc/src/gif/WML_create.gif)
-  
- * Click on `Go to Dashboard`. Then select `Add Deployments`. Add the most recent deployment.
- 
-  ![](doc/src/images/add_dep.gif)
-  
-* Click on `Configure Monitors`. Select the appropriate data type and algorithm type, according to your custom model. If you are using the same dataset as our example, follow the below steps-
- 
-   ![](doc/src/images/configure_payload.gif)
-  
- 
- ### 5. Create a new Watson Studio Python Notebook on IBM Cloud
- 
- * Go back to your Watson Studio Project Landing Page.
- * Click on `Add to Project> Notebook`.
- * Go to the `From URL` tab and enter the notebook URL- 
+ * Go back to your Cloud Pak for Data Project Landing Page.
+ * Click on `Notebook>Add Notebook`.
+ * Go to the `From URL` tab and enter the notebook URL- https://github.com/IBM/icp4d-telco-monitor-models-with-wml-openscale/blob/master/notebook/Setup_your_AIOS_Dashboard.ipynb
   ``` Attach one Screenshot
   ```
   ### Configure Credentials
-  * Open your WML instance from your IBM Cloud Dashboard.
-  * Go to `Service Credentials` tab, click on `View Credentials` and copy it.
-  
-   ![](doc/src/images/wml_cred.png)
-   
   * Open your Watson Studio notebook-
-  * Paste the copied credentials in the `WML_CREDENTIALS` variable.
+  * Paste the copied credentials in the previous step in the `WML_CREDENTIALS` variable (Update according to notebook).
+
+  ``` Attach one Screenshot
+  ```
+
+### 4. Configure Watson OpenScale on Cloud Pak for Data
+
+ * Open a Watson Openscale add-on on Cloud Pak for Data. Click on the `add-on` icon on top right of the instance, and the click on `options>Open` for OpenScale Add-on.
   
+  ![](doc/src/gif/openopenscale.gif)
+ 
+ * Click on `Configure>Database`. Add your Db2 Cloud credentials or your internal db credentials on Cloud Pak for Data.
+ 
+  ![](doc/src/gif/db2_cred.png)
+
+```
+  Note:
+    1. If you are adding Db2 on Cloud, ensure you have a Standard Plan and you select the Dallas Region
+    2. Create an Empty Schema in your Db. OpenScale will NOT recognise schemas that already have some data.
+```
+ * Click on `Machine learning providers`. Click on `Add Machine Learning Providers`. Enter the `WML Credentials` that you had copied in an earlier step. Click on `Save`.
+ 
+ 
  ### 8. Run the Inital Scoring and Payload Logging
   * Insert the Pandas Dataframe of the Training Data
   
@@ -148,12 +128,4 @@
 
 ## Sample Output
 
-  * Cognos Analytics Dashboard shows 2 views. 
-  
-    1) A map based selection of each tower, on selection of one tower, it shows the call drop prediction over the next 24 hours, with the help of the Time Series Model. It also shows which factors affect the Call Drop Percentage at one tower and by how much?
-    ![](doc/src/images/output1.png)
-    
-    2) Shows a Tower based analysis of Call Drop. Also, shows how the importance of factors have improved after de-biasing from AI OpenScale.
-  
-  ![](doc/src/images/output2.png)
 
