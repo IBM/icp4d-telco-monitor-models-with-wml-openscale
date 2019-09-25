@@ -112,7 +112,7 @@ NOTE: Save the credentials. It will be required during the later stages.
   #### 4.4 Add the Subscription Id
 
   * Now Start Running the notebook from `Section 1.2 till the end of Section 4.5`
-  * Before runnning the remaining (again, pls keep in mind it is better run cell by cell), update the variable `subscription_id` under `Section 2.6`, with id you have just created.
+  * Before runnning the remaining (again, pls keep in mind it is better run cell by cell), update the variable `subscription_id` under `Section 4.6`, with id you have just created.
   * You will find this id in the table above, as instructed in the notebook.
   * Now, run the rest of the notebook till the end.
     
