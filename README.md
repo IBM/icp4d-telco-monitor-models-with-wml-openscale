@@ -41,6 +41,7 @@ In this Code Pattern we demonstrate a way to Monitor your AI models in an applic
 ### 1. Create a new Project on your Cloud Pak for Data instance
 
 * Once you login to your Cloud Pak for Data instance. Click on the `menu` icon in the top left corner of your screen and then click on `Projects`.
+
    ![](doc/src/gif/gotoproject.gif)
    
 * When you reach the Project list, click on `New Project`. You will get a pop-up, make sure to have the `Analytics Project` option and enter the desired name. Once you click on `Ok` you will go to a new screen. Click on `Create` to complete your project creation.
