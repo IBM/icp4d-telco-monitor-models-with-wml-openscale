@@ -133,7 +133,7 @@ NOTE: Save the credentials. It will be required during the later stages.
  * Now, open your notebook again and click on the cell under `Section 2.2 Add Dataset`.
  * Click on the `10/01` icon and select the `Insert to code` option. Under that select `Insert Pandas Dataframe` option.
  
-    ![](doc/src/image/add_dataset.png)
+    ![](doc/src/images/add_dataset.png)
     
   #### 4.4 Add the Subscription Id
 
@@ -141,7 +141,7 @@ NOTE: Save the credentials. It will be required during the later stages.
   * Before runnning the remaining (again, pls keep in mind it is better run cell by cell), update the variable `subscription_id` under `Section 4.6`, with id you have just created.
   * You will find this id in the table above, as instructed in the notebook.
   
-    ![](doc/src/image/cp4d_subscription_id.png)
+    ![](doc/src/images/cp4d_subscription_id.png)
   
   * Now, run the rest of the notebook till the end.
     
