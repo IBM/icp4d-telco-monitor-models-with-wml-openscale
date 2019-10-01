@@ -155,14 +155,14 @@ NOTE: Save the credentials. It will be required during the later stages.
   You may not receive the same values as the below screenshots, since, we have only done an
   initial setup as of now you will have only one line in your charts.
 
-    ![](doc/src/images/Details.png)
+   ![](doc/src/images/Details.png)
     
   * Now select `_conds` as shown in the image above and hover over the graph. Select 
   `Click to view details`. Select the timeline, according to your current date. 
   
   To interpret the details, have a look at the screenshot below-
   
-    ![](doc/src/images/bias.png)
+   ![](doc/src/images/bias.png)
     
   1. Our dataset contains the fields- `Clear`,`Fog`,`Haze`, `Partly Cloudy`, `Rain`. The graph
   above suggests the field `Fog` contains a bias. 
@@ -179,14 +179,24 @@ NOTE: Save the credentials. It will be required during the later stages.
     the Fog causing Call Drops. Hence, it is important to keep monitoring your ML model on a real-
     time basis.
 
-* Now click on `View Transactions`. You will see the list of each Transaction and where exactly it had found the bias.
-* Come back to the Dashboard and explore the `Area under ROC` section. Again hover over the graph and select `click to view details`.
-  
- ![](doc/src/images/quality.png)
- 
-* You will receive estimates and the configured quality montiors value, in this case as shown below-
+### 5.3 Understanding Quality Montiors
 
-  ![](doc/src/images/quality_measures.png)
+  * Now click on `View Transactions`. You will see the list of each Transaction. Now, a transaction is basically the records
+  of all the data that flows into your model. It gives you the logs and if there is a bias identified it will also specify the
+  same.
+  
+  * **How to see your model performance** 
+  Come back to the Dashboard and explore the `Area under ROC` section. Again hover over the graph and select
+  `click to view details`.
+
+   ![](doc/src/images/quality.png)
+   
+   For the code pattern we have setup only the `Area under ROC` as a quality measure. As shown in the above image.
+
+  * You will receive estimates and the configured quality montiors value, in this case as shown below. The image shows the
+  overall True Positive and False Positive Ratio for the monitored model.
+
+   ![](doc/src/images/quality_measures.png)
   
   
   
