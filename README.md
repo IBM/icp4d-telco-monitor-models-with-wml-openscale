@@ -19,7 +19,12 @@ In this Code Pattern we demonstrate a way to Monitor your AI models in an applic
 ## Pre-requisites
 * [IBM Cloud Pak for Data](https://www.ibm.com/in-en/products/cloud-pak-for-data) 
 * [OpenScale add-on for Cloud Pak for Data](https://cloud.ibm.com/docs/services/ai-openscale-icp?topic=ai-openscale-icp-inst-install-icp )
+* A Db source connection, either locally to the environment or [Db2 on Cloud](https://cloud.ibm.com/catalog/services/db2) or any other external Db source.
 
+  ```
+  Note: This Code Pattern will require an empty schema created in your db.
+  You will be asked to provide the empty schema name at later steps of the documentation.
+  ```
 ## Architecture Diagram
   
 ![](doc/src/images/Architecture_Diagram.png)
@@ -60,7 +65,7 @@ In this Code Pattern we demonstrate a way to Monitor your AI models in an applic
 
 * Create a new [Watson Machine Learning](https://cloud.ibm.com/catalog/services/machine-learning) instance on IBM Cloud. Log in to IBM Cloud or sign up for IBM Cloud if you don't have an account by following the on-screen instructions.
 
-* Select the location to `Dallas` region and hit create.
+* Select the location to `Dallas` region and hit create. Pls DO NOT create WML to any other location.
 
   ![](doc/src/gif/createwml.gif)
   
@@ -133,7 +138,7 @@ NOTE: Save the credentials. It will be required during the later stages.
  * Now, open your notebook again and click on the cell under `Section 2.2 Add Dataset`.
  * Click on the `10/01` icon and select the `Insert to code` option. Under that select `Insert Pandas Dataframe` option.
  
-    ![](doc/src/images/add_dataset.png)
+    ![](doc/src/images/cp4d_insert_pandas.png)
     
   #### 4.4 Add the Subscription Id
 
