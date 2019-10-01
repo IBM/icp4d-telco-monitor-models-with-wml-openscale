@@ -19,12 +19,7 @@ In this Code Pattern we demonstrate a way to Monitor your AI models in an applic
 ## Pre-requisites
 * [IBM Cloud Pak for Data](https://www.ibm.com/in-en/products/cloud-pak-for-data) 
 * [OpenScale add-on for Cloud Pak for Data](https://cloud.ibm.com/docs/services/ai-openscale-icp?topic=ai-openscale-icp-inst-install-icp )
-* A Db source connection, either locally to the environment or [Db2 on Cloud](https://cloud.ibm.com/catalog/services/db2) or any other external Db source.
 
-  ```
-  Note: This Code Pattern will require an empty schema created in your db.
-  You will be asked to provide the empty schema name at later steps of the documentation.
-  ```
 ## Architecture Diagram
   
 ![](doc/src/images/Architecture_Diagram.png)
@@ -46,31 +41,17 @@ In this Code Pattern we demonstrate a way to Monitor your AI models in an applic
 ### 1. Create a new Project on your Cloud Pak for Data instance
 
 * Once you login to your Cloud Pak for Data instance. Click on the `menu` icon in the top left corner of your screen and then click on `Projects`.
-
    ![](doc/src/gif/gotoproject.gif)
    
-* When you reach the Project list, click on `New Project`.
+* When you reach the Project list, click on `New Project`. You will get a pop-up, make sure to have the `Analytics Project` option and enter the desired name. Once you click on `Ok` you will go to a new screen. Click on `Create` to complete your project creation.
 
-  ![](doc/src/images/cp4d_projects.png)  
-  
-* You will get a pop-up, make sure to have the `Analytics Project` option and enter the desired name. Once you click on `Ok` you will go to a new screen. 
-   
-  ![](doc/src/images/cp4d_create_project.png) 
-  
-* Click on `Create` to complete your project creation.
-  
-   ![](doc/src/images/cp4d_create_project1.png)
-   
 ### 2. Add a new Watson Machine Learning Instance
 
 * Create a new [Watson Machine Learning](https://cloud.ibm.com/catalog/services/machine-learning) instance on IBM Cloud. Log in to IBM Cloud or sign up for IBM Cloud if you don't have an account by following the on-screen instructions.
 
-* Select the location to `Dallas` region and hit create. Pls DO NOT create WML to any other location.
-
+* Select the location to `Dallas` region and hit create.
   ![](doc/src/gif/createwml.gif)
-  
 * Once the instance is created. Click on `Service Credentials`. Click on `New Credentials` and then click on `View Credentials`. Copy using the icon. 
-
   ![](doc/src/gif/copycred.gif)
 
 ```
@@ -81,9 +62,7 @@ NOTE: Save the credentials. It will be required during the later stages.
 
  * Go back to your Cloud Pak for Data Project Landing Page.
  * Click on `Notebook>Add Notebook`.
- 
   ![](doc/src/gif/createnotebook.gif)
-  
  * Go to the `From URL` tab and enter the notebook URL- https://github.com/IBM/icp4d-telco-monitor-models-with-wml-openscale/blob/master/notebook/Setup_your_AIOS_Dashboard.ipynb
  
   ![](doc/src/images/url_notebook.png)
@@ -100,14 +79,12 @@ NOTE: Save the credentials. It will be required during the later stages.
  3. [Add the dataset](#4-3-add-the-dataset)
  4. [Add the subscription id](#4-4-add-the-subscription-id)
  
- #### 4.1 Install the Packages
+ #### 4.1 Install the Necessary Packages
  
  * Click on the `Run` icon and install the necessary packages given in each cell.
  * Next, restart your kernel by either clicking the restart icon or `Kernel>Restart`.
  
-  ![](doc/src/images/kernel_restart.png)
-  
- #### 4.2 Configure the Details
+ #### 4.2 Configure the Necessary Details
  
  * Under `Section 2.1 Global Variables` enter the following-
     a) Your desired Model Name
@@ -116,42 +93,33 @@ NOTE: Save the credentials. It will be required during the later stages.
     ```
     Note: Pls make sure you have an empty schema, ie has no content at all in it. 
     ```
-   ![](doc/src/images/cp4d_AIOS_Model.png)
-
  * Under `Section 2.3 Add your WML Credentials`. Add the credentials you had copied earlier in a previous step, while creating the instance.
-  
-    ![](doc/src/images/cp4d_wml_cred.png)
-    
  * Under `Section 2.4 Update your AIOS Credentials`. Add the necessary instance details as instructed in the cell.
     a) Replace the <> with the information within the brackets.
  * Under `Section 2.5 Add your Db Credentials`. Add your db credentials and make sure the keys given in the template have     values filled in. (ie, hostname, username, db, port, etc.)
- 
-  ![](doc/src/images/cp4d_db2_cred.png)
  
  #### 4.3 Add the Dataset
  
  * Go back to your Project Landing Page. 
  * Clone this repo, by clicking on `Clone or Download`, unzip it and navigate to the `datasets` folder.
  * In your Project Page. Click on `Dataset>Add new Dataset> Browse`. Select the dataset downloaded.
+ 
    ![](doc/src/gif/adddataset.gif)
     
  * Now, open your notebook again and click on the cell under `Section 2.2 Add Dataset`.
  * Click on the `10/01` icon and select the `Insert to code` option. Under that select `Insert Pandas Dataframe` option.
  
-    ![](doc/src/images/cp4d_insert_pandas.png)
+    ![](doc/src/image/add_dataset.png)
     
   #### 4.4 Add the Subscription Id
 
   * Now Start Running the notebook from `Section 1.2 till the end of Section 4.5`
   * Before runnning the remaining (again, pls keep in mind it is better run cell by cell), update the variable `subscription_id` under `Section 4.6`, with id you have just created.
   * You will find this id in the table above, as instructed in the notebook.
-  
-    ![](doc/src/images/cp4d_subscription_id.png)
-  
   * Now, run the rest of the notebook till the end.
     
 
-## 5. View your Watson OpenScale Dashboard on Cloud Pak for Data
+## 5. Sample Output
 
 * Open the Watson Openscale add-on on Cloud Pak for Data. Click on the `add-on` icon on top right of the instance, and the click on `options>Open` for OpenScale Add-on.
   
@@ -159,15 +127,57 @@ NOTE: Save the credentials. It will be required during the later stages.
   
 * You will see a dashboard setup for your model. Below is a screenshot of more than one deployment of different towers of a similar dataset as given in this repo-
 
-  ![](doc/src/images/dashboard_initial.png)
+### 5.1 Introduction to the Use-Case
 
-* Select the desired deployment the `options>View Details`. You will see a full Dashboard with various charts telling you how your model has been performing over various time intervals. Since we have only done an initial setup as of now you will have only one line in your charts.
+  * The dashboard consists of Call Drop Prediction Models for 3 different towers- A, B and C.
+  * OpenScale is configured so as to monitor how your models are performing over time. So the below secreenshot, gives one such snapshot.
+  
+   ![](doc/src/images/dashboard_initial.png)
+  
+  * As we can see, the model for Tower C demonstrates a fairness bias warning of 92%. 
+  
+    #### What is a fairness-bias and why do we need to mitigate it?
+     Data in this day and age comes from the most wide variety of sources. Being able to give the 
+     right input to a machine learning model is crucial to a succesful ML implementation in an
+     application. But, if the underlying data is biased in any form, there is a risk that
+     structural inequalities and unfair biases are not just replicated, but also amplified. 
+     Hence, AI OpenScale is useful when you need to identify the bias, in a real-time basis (ie, 
+     as and when payload flows into your ML system).
+  
+  Now, that we have identified a bias, let us see the consequence of the bias and what exactly is
+  causing the bias in this example.
+     
+### 5.2 Understanding Bias and a brief on de-biasing
 
- ![](doc/src/images/Details.png)
- 
-* Now select `_conds` as shown in the image above and hover over the graph. Select `Click to view details`. Select the timeline, according to your current date. You will get a graph as shown below-
+  * Select the desired deployment the `options>View Details`. You will see a full Dashboard with
+  various charts telling you how your model has been performing over various time intervals.
+  
+  You may not receive the same values as the below screenshots, since, we have only done an
+  initial setup as of now you will have only one line in your charts.
 
- ![](doc/src/images/bias.png)
+    ![](doc/src/images/Details.png)
+    
+  * Now select `_conds` as shown in the image above and hover over the graph. Select 
+  `Click to view details`. Select the timeline, according to your current date. 
+  
+  To interpret the details, have a look at the screenshot below-
+  
+    ![](doc/src/images/bias.png)
+    
+  1. Our dataset contains the fields- `Clear`,`Fog`,`Haze`, `Partly Cloudy`, `Rain`. The graph
+  above suggests the field `Fog` contains a bias. 
+  2. Now, what does this really mean?
+    As we can see with the legend- we have the Favorable Outcome and Unfavorable Outcome. With
+    this bias value we see that with the field value `Fog` compared to the values has a lesser %
+    of favorable outcomes. Why does this affect my model? It creates a disparity and thereby
+    allowing your model to be biased towards the unfavorable outcome in case of `fog`. 
+  3. Ok, so how does it really matter to me?
+    The best way to explain the consequence of the disparity is by taking this example, suppose we
+    allow the disparity to creep in. Our model will slowly start believing that moment the weather
+    condition is foggy, it needs to predict the unfavorable outcome(1) and in this case the Call
+    will drop. Now, this may not be the case in reality. There maybe other conditions ALONG with
+    the Fog causing Call Drops. Hence, it is important to keep monitoring your ML model on a real-
+    time basis.
 
 * Now click on `View Transactions`. You will see the list of each Transaction and where exactly it had found the bias.
 * Come back to the Dashboard and explore the `Area under ROC` section. Again hover over the graph and select `click to view details`.
