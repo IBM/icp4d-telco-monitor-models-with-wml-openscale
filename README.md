@@ -44,15 +44,28 @@ In this Code Pattern we demonstrate a way to Monitor your AI models in an applic
 
    ![](doc/src/gif/gotoproject.gif)
    
-* When you reach the Project list, click on `New Project`. You will get a pop-up, make sure to have the `Analytics Project` option and enter the desired name. Once you click on `Ok` you will go to a new screen. Click on `Create` to complete your project creation.
+* When you reach the Project list, click on `New Project`.
 
+  ![](doc/src/images/cp4d_projects.png)  
+  
+* You will get a pop-up, make sure to have the `Analytics Project` option and enter the desired name. Once you click on `Ok` you will go to a new screen. 
+   
+  ![](doc/src/images/cp4d_create_project.png) 
+  
+* Click on `Create` to complete your project creation.
+  
+   ![](doc/src/images/cp4d_create_project1.png)
+   
 ### 2. Add a new Watson Machine Learning Instance
 
 * Create a new [Watson Machine Learning](https://cloud.ibm.com/catalog/services/machine-learning) instance on IBM Cloud. Log in to IBM Cloud or sign up for IBM Cloud if you don't have an account by following the on-screen instructions.
 
 * Select the location to `Dallas` region and hit create.
+
   ![](doc/src/gif/createwml.gif)
+  
 * Once the instance is created. Click on `Service Credentials`. Click on `New Credentials` and then click on `View Credentials`. Copy using the icon. 
+
   ![](doc/src/gif/copycred.gif)
 
 ```
@@ -63,7 +76,9 @@ NOTE: Save the credentials. It will be required during the later stages.
 
  * Go back to your Cloud Pak for Data Project Landing Page.
  * Click on `Notebook>Add Notebook`.
+ 
   ![](doc/src/gif/createnotebook.gif)
+  
  * Go to the `From URL` tab and enter the notebook URL- https://github.com/IBM/icp4d-telco-monitor-models-with-wml-openscale/blob/master/notebook/Setup_your_AIOS_Dashboard.ipynb
  
   ![](doc/src/images/url_notebook.png)
@@ -85,6 +100,8 @@ NOTE: Save the credentials. It will be required during the later stages.
  * Click on the `Run` icon and install the necessary packages given in each cell.
  * Next, restart your kernel by either clicking the restart icon or `Kernel>Restart`.
  
+  ![](doc/src/images/kernel_restart.png)
+  
  #### 4.2 Configure the Necessary Details
  
  * Under `Section 2.1 Global Variables` enter the following-
