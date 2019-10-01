@@ -95,14 +95,14 @@ NOTE: Save the credentials. It will be required during the later stages.
  3. [Add the dataset](#4-3-add-the-dataset)
  4. [Add the subscription id](#4-4-add-the-subscription-id)
  
- #### 4.1 Install the Necessary Packages
+ #### 4.1 Install the Packages
  
  * Click on the `Run` icon and install the necessary packages given in each cell.
  * Next, restart your kernel by either clicking the restart icon or `Kernel>Restart`.
  
   ![](doc/src/images/kernel_restart.png)
   
- #### 4.2 Configure the Necessary Details
+ #### 4.2 Configure the Details
  
  * Under `Section 2.1 Global Variables` enter the following-
     a) Your desired Model Name
@@ -111,10 +111,17 @@ NOTE: Save the credentials. It will be required during the later stages.
     ```
     Note: Pls make sure you have an empty schema, ie has no content at all in it. 
     ```
+   ![](doc/src/images/cp4d_AIOS_Model.png)
+
  * Under `Section 2.3 Add your WML Credentials`. Add the credentials you had copied earlier in a previous step, while creating the instance.
+  
+    ![](doc/src/images/cp4d_wml_cred.png)
+    
  * Under `Section 2.4 Update your AIOS Credentials`. Add the necessary instance details as instructed in the cell.
     a) Replace the <> with the information within the brackets.
  * Under `Section 2.5 Add your Db Credentials`. Add your db credentials and make sure the keys given in the template have     values filled in. (ie, hostname, username, db, port, etc.)
+ 
+  ![](doc/src/images/cp4d_db2_cred.png)
  
  #### 4.3 Add the Dataset
  
@@ -125,6 +132,7 @@ NOTE: Save the credentials. It will be required during the later stages.
     
  * Now, open your notebook again and click on the cell under `Section 2.2 Add Dataset`.
  * Click on the `10/01` icon and select the `Insert to code` option. Under that select `Insert Pandas Dataframe` option.
+ 
     ![](doc/src/image/add_dataset.png)
     
   #### 4.4 Add the Subscription Id
@@ -132,6 +140,9 @@ NOTE: Save the credentials. It will be required during the later stages.
   * Now Start Running the notebook from `Section 1.2 till the end of Section 4.5`
   * Before runnning the remaining (again, pls keep in mind it is better run cell by cell), update the variable `subscription_id` under `Section 4.6`, with id you have just created.
   * You will find this id in the table above, as instructed in the notebook.
+  
+    ![](doc/src/image/cp4d_subscription_id.png)
+  
   * Now, run the rest of the notebook till the end.
     
 
