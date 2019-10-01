@@ -166,12 +166,12 @@ NOTE: Save the credentials. It will be required during the later stages.
     
   1. Our dataset contains the fields- `Clear`,`Fog`,`Haze`, `Partly Cloudy`, `Rain`. The graph
   above suggests the field `Fog` contains a bias. 
-  2. Now, what does this really mean?
+  2. **Now, what does this really mean?**
     As we can see with the legend- we have the Favorable Outcome and Unfavorable Outcome. With
     this bias value we see that with the field value `Fog` compared to the values has a lesser %
     of favorable outcomes. Why does this affect my model? It creates a disparity and thereby
     allowing your model to be biased towards the unfavorable outcome in case of `fog`. 
-  3. Ok, so how does it really matter to me?
+  3. **Ok, so how does it really matter to me?**
     The best way to explain the consequence of the disparity is by taking this example, suppose we
     allow the disparity to creep in. Our model will slowly start believing that moment the weather
     condition is foggy, it needs to predict the unfavorable outcome(1) and in this case the Call
