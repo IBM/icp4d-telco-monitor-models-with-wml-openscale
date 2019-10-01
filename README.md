@@ -1,4 +1,3 @@
-# WORK IN PROGRESS
 # Monitor your ML Models using Watson OpenScale
 
 Businesses today are increasingly certain that AI will be a driving force in the evolution of their industries over the next few years. To successful infuse AI into your product or solution, there are many that factors that challenges its widespread adoption in the business and achieve their expected outcomes. A few listed below-
