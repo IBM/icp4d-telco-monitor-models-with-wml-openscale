@@ -129,10 +129,9 @@ NOTE: Save the credentials. It will be required during the later stages.
 
   ![](doc/src/images/initial_dashboard.png)
 
-```
-Note: If you run the notebook with different subset of the dataset ( found in- filter by outgoing_site_id 
+* If you run the notebook with different subset of the dataset ( found in- filter by outgoing_site_id 
 [Predict, Manage and Monitor the call drops of cell tower using Cloud Pack for Data](https://github.com/IBM/icp4d-telco-manage-ml-project/blob/master/datasets/Telco_training_final.csv) and different parameters you can obtain different outputs according to your requirement
-```
+
 
 
 * You will see a dashboard setup for your model. Below is a screenshot of more than one deployment of different towers of a similar dataset as given in this repo.
