@@ -117,6 +117,7 @@ NOTE: Save the credentials. It will be required during the later stages.
   * You will find this id in the table above, as instructed in the notebook.
   * Now, run the rest of the notebook till the end.
     
+ 
 
 ## 5. Sample Output
 
@@ -124,6 +125,10 @@ NOTE: Save the credentials. It will be required during the later stages.
   
   ![](doc/src/gif/openopenscale.gif)
   
+* You will see the initial setup looking like this-
+
+  ![](doc/src/images/initial_dashboard.png)
+
 * You will see a dashboard setup for your model. Below is a screenshot of more than one deployment of different towers of a similar dataset as given in this repo-
 
 ### 5.1 Introduction to the Use-Case
