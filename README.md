@@ -99,6 +99,8 @@ On the next panel, select the `From URL` tab and enter the notebook URL: [https:
 
 You will run cells individually by highlighting each cell, then either click the `Run` button at the top of the notebook. While the cell is running, an asterisk (`[*]`) will show up to the left of the cell. When that cell has finished executing a sequential number will show up (i.e. `[17]`).
 
+> **NOTE**: For reference, we have included a completed notebook in the `/examples` directory of this repo. This version of the notebook includes all the executed steps and outputs. See [https://github.com/IBM/icp4d-telco-monitor-models-with-wml-openscale/blob/master/examples/Setup_your_AIOS_Dashboard-Example.jupyter-py36.ipynb](https://github.com/IBM/icp4d-telco-monitor-models-with-wml-openscale/blob/master/examples/Setup_your_AIOS_Dashboard-Example.jupyter-py36.ipynb)
+
 #### Install the Necessary Packages
 
 * Click on the `Run` icon and install the necessary packages described in the first 3 cells.
@@ -130,7 +132,7 @@ Choose the `Local` tab, and select the `call_drop_data_train.csv` file that you 
 
 * Under section `2.5 Add your Db Credentials`, add your database credentials and make sure the keys given in the template have values filled in.
 
-> **NOTE**: For details on how to setup a connection to a Db2 instance that is associated with your Cloud Pak for Data cluster, view the tutorial [Building Dashboards in Cognos Analytics using IBM Cloud Pak for Data]().
+  > **NOTE**: These credentials will **only** be used if you have **not** already configured your Watson OpenScale Datamart. As you will see in section `4.3 Setup the Datamart on AI OpenScale`, if the Datamart already exists, it will be used. If not, the notebook will create the Datamart, using these credentials to configure it.
 
 #### Add the Subscription ID
 
