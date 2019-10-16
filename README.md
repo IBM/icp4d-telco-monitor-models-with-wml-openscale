@@ -68,7 +68,7 @@ In this code pattern we demonstrate a way to monitor your AI models in an applic
 
 * When you reach the Project list, click on `New Project`. You will get a pop-up, make sure to have the `Analytics Project` option and enter the desired name. Once you click on `Ok` you will go to a new screen. Click on `Create` to complete your project creation.
 
-## 3. Upload the dataset to Cloud Pak for Data
+### 3. Upload the dataset to Cloud Pak for Data
 
 Clone this repository:
 
