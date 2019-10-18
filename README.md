@@ -1,5 +1,10 @@
 # Monitor your machine learning models using Watson OpenScale in IBM Cloud Pak for Data
 
+> **Note**: This code pattern is part of a series that explores telecom call-drop predictions using IBM Cloud Pak for Data, Data Virtualization, Watson OpenScale, and Cognos Analyics. Other assets included in the series include:
+>- Tutorial - [Query across distributed data sources as one: Data virtualization for data analytics](https://developer.ibm.com/tutorials/query-across-distributed-data-sources-as-one-data-virtualization-for-data-analytics/)
+>- Code pattern - [Predict, Manage and Monitor the call drops of cell towers using Cloud Pak for Data](https://github.com/IBM/icp4d-telco-manage-ml-project)
+>- Tutorial - [Build dashboards in Cognos Analytics on IBM Cloud Pak for Data](https://developer.ibm.com/tutorial/build-dashboards-in-cognos-analytics-on-ibm-cloud-pak-for-data)
+
 Businesses today are increasingly certain that AI will be a driving force in the evolution of their industries over the next few years. To successful infuse AI into your product or solution, there are many factors that challenges its widespread adoption in the business and to achieving their expected outcomes. A few are listed below:
 
   1. Building trust - Organizations and businesses tend to be skeptical about AI because of its "black box" nature, resulting in many promising models no going into production.
