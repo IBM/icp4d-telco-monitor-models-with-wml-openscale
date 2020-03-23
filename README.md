@@ -97,6 +97,10 @@ In your project, choose `Notebooks` from the left-hand menu, then click `+Add No
 On the next panel, select the `From URL` tab and enter the notebook URL: [https://github.com/IBM/icp4d-telco-monitor-models-with-wml-openscale/blob/master/notebook/Setup_your_AIOS_Dashboard.ipynb](https://github.com/IBM/icp4d-telco-monitor-models-with-wml-openscale/blob/master/notebook/Setup_your_AIOS_Dashboard.ipynb)
 
   ![url_notebook](doc/src/images/url_notebook.png)
+  
+```
+Note: If you CPD v2.5+, use the following notebook URL- https://github.com/IBM/icp4d-telco-monitor-models-with-wml-openscale/blob/master/notebooks/Setup_your_AIOS_Dashboard_V2.5.ipynb
+```
 
 > **Note**: Choose the Python 3.6 environment.
 
@@ -138,6 +142,14 @@ Choose the `Local` tab, and select the `call_drop_data_train.csv` file that you 
 * Under section `2.5 Add your Db Credentials`, add your database credentials and make sure the keys given in the template have values filled in.
 
   > **NOTE**: These credentials will **only** be used if you have **not** already configured your Watson OpenScale Datamart. As you will see in section `4.3 Setup the Datamart on AI OpenScale`, if the Datamart already exists, it will be used. If not, the notebook will create the Datamart, using these credentials to configure it.
+  
+### For CPD v2.5 users-
+
+* Run all cells in the notebook till `4. Create a new Deployment Space`
+* After that follow the steps in the documentation to obtain the Deployment Space name and insert into the notebook cell
+ ![enter dep name](/doc/src/images/dep_name.png)
+ 
+* Run the rest of the notebook as per the rest of the instructions
 
 #### Add the Subscription ID
 
