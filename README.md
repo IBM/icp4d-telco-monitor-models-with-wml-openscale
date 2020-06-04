@@ -53,6 +53,8 @@ In this code pattern we demonstrate a way to monitor your AI models in an applic
 
 ### 1. Create a Watson Machine Learning instance
 
+### Steps for WML on Cloud
+
 * Create a new [Watson Machine Learning](https://cloud.ibm.com/catalog/services/machine-learning) instance on IBM Cloud. Log in to IBM Cloud or sign up for IBM Cloud if you don't have an account by following the on-screen instructions.
 
 * Select the location to `Dallas` region and hit create.
