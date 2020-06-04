@@ -96,4 +96,4 @@ Next, restart your kernel by either clicking the restart icon or Kernel > Restar
 
     ![](doc/src/images/Scoring_api.png)
     
-* To test the Scoring endpoint. Copy paste the code from [Scoring.py]() into your notebook cell and click on the `run` button to see the output.
+* To test the Scoring endpoint. Copy paste the code from [Scoring.py](https://github.com/IBM/icp4d-telco-monitor-models-with-wml-openscale/blob/master/notebooks/scoring.py) into your notebook cell and click on the `run` button to see the output.
