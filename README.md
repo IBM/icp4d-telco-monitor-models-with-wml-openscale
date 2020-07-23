@@ -121,9 +121,19 @@ You will run cells individually by highlighting each cell, then either click the
 
 #### Add the Dataset
 
-* In section `2.2 Add Dataset`, highlight the blank cell by clicking on it. Click on the *10/01* button to select a specific data set.
+* Download the dataset using this link- https://github.com/IBM/icp4d-telco-monitor-models-with-wml-openscale/blob/master/data/call_drop_data_train.csv . Right click on `Download` and click on `Save link as`. Save the file with .csv extension. 
+
+```Note: Ensure it is not saved as a text file.
+```
+  ![download_dataset](/doc/src/gif/download_dataset.gif)
+  
+* In section `2.2 Add Dataset`, highlight the blank cell by clicking on it. Click on the *10/01* button and the `browse` to select the downloaded data set.
+
+  ![add_dataset](/doc/src/gif/add_dataset.gif)
 
 * Select the `call_drop_data_train.csv` file that you added to the project. Under the `Insert to code` option, click `Insert Pandas DataFrame`.
+
+  ![add_pd](/doc/src/images/add_pd.png)
 
 > **IMPORTANT**:  Ensure the variable name is set to `df_data_1`.
 
@@ -136,7 +146,14 @@ You will run cells individually by highlighting each cell, then either click the
   * The name of an `empty` schema in your database
 
   > **Note** : Make sure you have an empty schema, i.e. it has no content.
-
+  
+  ![global_vars](/doc/src/images/global_vars.png)
+  
+  <details><summary><b>For WML on IBM Cloud Pak for Data users</b></summary>
+    * Enter the `Deployment Space` Associated for the project as created in Step 2.
+      ![global_vars_cpd](/doc/src/images/global_vars_cpd.png)
+  </details>
+  
 * Under section `2.3 Add your WML Credentials`, add the credentials you had copied earlier when creating the Watson Machine Learning instance.
 
 * Under section `2.4 Update your AIOS Credentials`, add the necessary Cloud Pak for Data instance details as instructed in the cell.
