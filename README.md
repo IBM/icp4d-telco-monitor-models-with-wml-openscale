@@ -43,6 +43,8 @@ In this code pattern we demonstrate a way to monitor your AI models in an applic
 
 ## Steps
 
+> **Note**: This code pattern includes steps to use WML on IBM Cloud as well as WML within your Cloud Pak for Data instance.
+
 1. [Create a Watson Machine Learning instance](#1-create-a-watson-machine-learning-instance)
 1. [Create a new project in Cloud Pak for Data](#2-create-a-new-project-in-cloud-pak-for-data)
 1. [Upload the dataset to Cloud Pak for Data](#3-upload-the-dataset-to-cloud-pak-for-data)
@@ -53,7 +55,7 @@ In this code pattern we demonstrate a way to monitor your AI models in an applic
 
 ### 1. Create a Watson Machine Learning instance
 
-### Steps for WML on Cloud
+<details><summary><b>IBM Cloud</b></summary>
 
 * Create a new [Watson Machine Learning](https://cloud.ibm.com/catalog/services/machine-learning) instance on IBM Cloud. Log in to IBM Cloud or sign up for IBM Cloud if you don't have an account by following the on-screen instructions.
 
