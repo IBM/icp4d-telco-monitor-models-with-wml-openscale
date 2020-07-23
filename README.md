@@ -53,7 +53,9 @@ In this code pattern we demonstrate a way to monitor your AI models in an applic
 1. [Display deployment in Watson OpenScale](#6-display-deployment-in-watson-openscale)
 1. [Additional use-case for Watson OpenScale](#7-additional-use-case-for-watson-openscale)
 
-### 1. Create a Watson Machine Learning instance (ONLY FOR IBM CLOUD)
+### 1. Create a Watson Machine Learning instance 
+
+> **Note**: This step is only for <b>WML on IBM CLOUD</b>
 
 * Create a new [Watson Machine Learning](https://cloud.ibm.com/catalog/services/machine-learning) instance on IBM Cloud. Log in to IBM Cloud or sign up for IBM Cloud if you don't have an account by following the on-screen instructions.
 
@@ -74,9 +76,11 @@ In this code pattern we demonstrate a way to monitor your AI models in an applic
 
 * Once you login to your Cloud Pak for Data instance. Click on the (☰) `menu` icon in the top left corner of your screen and click `Projects`.
 
-  ![go_to_project](doc/src/gif/gotoproject.gif)
+  ![go_to_project](doc/src/images/goto_project.png)
 
-* When you reach the Project list, click on `New Project`. You will get a pop-up, make sure to have the `Analytics Project` option and enter the desired name. Once you click on `Ok` you will go to a new screen. Click on `Create` to complete your project creation.
+* When you reach the Project list, click on `Create and Empty Project`. You will be navigated to a new page where you can enter the desired name(or `Telco_CallDrop`). Once you click on `Ok` you will go to a new screen. Click on `Create` to complete your project creation.
+
+  ![create_project](doc/src/gif/create_project.gif)
 
 ### 3. Upload the dataset to Cloud Pak for Data
 
