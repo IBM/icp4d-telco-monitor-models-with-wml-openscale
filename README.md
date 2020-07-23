@@ -47,15 +47,14 @@ In this code pattern we demonstrate a way to monitor your AI models in an applic
 
 1. [Create a Watson Machine Learning instance](#1-create-a-watson-machine-learning-instance)
 1. [Create a new project in Cloud Pak for Data](#2-create-a-new-project-in-cloud-pak-for-data)
-1. [Upload the dataset to Cloud Pak for Data](#3-upload-the-dataset-to-cloud-pak-for-data)
-1. [Import notebook to Cloud Pak for Data](#4-import-notebook-to-cloud-pak-for-data)
-1. [Follow the steps in the notebook](#5-follow-the-steps-in-the-notebook)
-1. [Display deployment in Watson OpenScale](#6-display-deployment-in-watson-openscale)
-1. [Additional use-case for Watson OpenScale](#7-additional-use-case-for-watson-openscale)
+1. [Import notebook to Cloud Pak for Data](#3-import-notebook-to-cloud-pak-for-data)
+1. [Follow the steps in the notebook](#4-follow-the-steps-in-the-notebook)
+1. [Display deployment in Watson OpenScale](#5-display-deployment-in-watson-openscale)
+1. [Additional use-case for Watson OpenScale](#6-additional-use-case-for-watson-openscale)
 
 ### 1. Create a Watson Machine Learning instance 
 
-> **Note**: This step is only for <b>WML on IBM CLOUD</b>
+> **Note**: This step is only for <b>For WML on IBM CLOUD users</b>
 
 * Create a new [Watson Machine Learning](https://cloud.ibm.com/catalog/services/machine-learning) instance on IBM Cloud. Log in to IBM Cloud or sign up for IBM Cloud if you don't have an account by following the on-screen instructions.
 
@@ -70,8 +69,6 @@ In this code pattern we demonstrate a way to monitor your AI models in an applic
 > **NOTE**: Save the credentials. It will be required when running the notebook.
 
 
-
-
 ### 2. Create a new project in Cloud Pak for Data
 
 * Once you login to your Cloud Pak for Data instance. Click on the (☰) `menu` icon in the top left corner of your screen and click `Projects`.
@@ -81,39 +78,33 @@ In this code pattern we demonstrate a way to monitor your AI models in an applic
 * When you reach the Project list, click on `Create and Empty Project`. You will be navigated to a new page where you can enter the desired name(or `Telco_CallDrop`). Once you click on `Ok` you will go to a new screen. Click on `Create` to complete your project creation.
 
   ![create_project](doc/src/gif/create_project.gif)
-
-### 3. Upload the dataset to Cloud Pak for Data
-
-Clone this repository:
-
-```bash
-git clone https://github.com/IBM/icp4d-telco-monitor-with-wml-openscale/
-cd icp4d-telco-monitor-with-wml-openscale
-```
-
-In your project, choose `Data sets` from the left-hand menu, then click `+Add Data set`.
-
-Click `Select from your local file system` to select the `call_drop_data_train.csv` file.
-
-   ![adddataset](doc/src/gif/adddataset.gif)
-
-### 4. Import notebook to Cloud Pak for Data
-
-In your project, choose `Notebooks` from the left-hand menu, then click `+Add Notebook`.
-
-  ![create_notebook](doc/src/gif/createnotebook.gif)
-
-On the next panel, select the `From URL` tab and enter the notebook URL: [https://github.com/IBM/icp4d-telco-monitor-models-with-wml-openscale/blob/master/notebook/Setup_your_AIOS_Dashboard.ipynb](https://github.com/IBM/icp4d-telco-monitor-models-with-wml-openscale/blob/master/notebook/Setup_your_AIOS_Dashboard.ipynb)
-
-  ![url_notebook](doc/src/images/url_notebook.png)
   
-```
-Note: If you CPD v2.5+, use the following notebook URL- https://github.com/IBM/icp4d-telco-monitor-models-with-wml-openscale/blob/master/notebooks/Setup_your_AIOS_Dashboard_V2.5.ipynb
-```
+ <details><summary><b>For WML on IBM Cloud Pak for Data users</b></summary>
+  
+  #### Create a new Deployment Space
 
+  * Go to the `Settings` tab. Click on `Associate a Deployment Space`
+
+     ![](doc/src/images/Deployment_Space.png)
+
+  * Enter a name for the new space and store this name, for future reference.
+
+      ![](doc/src/images/Space_Create.png)
+
+  > **Note:** If you already have Deployment Space created for your project. Skip this step and store the name for future reference
+ 
+ </details>
+
+
+### 3. Import notebook to Cloud Pak for Data
+
+* In the created project page, click on the `Add to Project` button. Then click on `Notebook`.
+
+   ![](doc/src/images/add_notebook.png)
+   
 > **Note**: Choose the Python 3.6 environment.
 
-### 5. Follow the steps in the notebook
+### 4. Follow the steps in the notebook
 
 You will run cells individually by highlighting each cell, then either click the `Run` button at the top of the notebook. While the cell is running, an asterisk (`[*]`) will show up to the left of the cell. When that cell has finished executing a sequential number will show up (i.e. `[17]`).
 
@@ -167,7 +158,7 @@ Choose the `Local` tab, and select the `call_drop_data_train.csv` file that you 
 * You will find this id in the table above the cell, as instructed in the notebook.
 * Now, run the rest of the notebook to completion.
 
-### 6. Display deployment in Watson OpenScale
+### 5. Display deployment in Watson OpenScale
 
 * Open the Watson Openscale add-on on Cloud Pak for Data. Click the `add-ons` icon located in the top right corner of the panel, which will show the list of add-ons. Use the option menu in the Watson OpenScale add-on tile to open it.
 
@@ -177,7 +168,7 @@ Choose the `Local` tab, and select the `call_drop_data_train.csv` file that you 
 
   ![initial_dashboard](doc/src/images/initial_dashboard.png)
 
-### 7. Additional use-case for Watson OpenScale
+### 6. Additional use-case for Watson OpenScale
 
 Included in the data directory of this repo is a file named [Telco_training_final.csv](https://github.com/IBM/icp4d-telco-monitor-models-with-wml-openscale/blob/master/data/Telco_training_final.csv)). This contains call drop data for multiple cell towers. If you filter the data on the field `outgoing_site_id`, you can create a file for each cell tower you would like to monitor. Using the same notebook, you can create a new deployment for each model.
 
