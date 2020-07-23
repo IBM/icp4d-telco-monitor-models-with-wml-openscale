@@ -102,6 +102,10 @@ In this code pattern we demonstrate a way to monitor your AI models in an applic
 
    ![](doc/src/images/add_notebook.png)
    
+* You will be navigated to a new page. Click on the `From URL` tab and enter the url `<Insert URL>`. Enter the name `TowerA_Call_Drop` and click on the `Create` button.
+  
+  ![](doc/src/images/create_notebook.png)  
+   
 > **Note**: Choose the Python 3.6 environment.
 
 ### 4. Follow the steps in the notebook
@@ -117,9 +121,9 @@ You will run cells individually by highlighting each cell, then either click the
 
 #### Add the Dataset
 
-In section `2.2 Add Dataset`, highlight the blank cell by clicking on it. Click on the *10/01* button to select a specific data set.
+* In section `2.2 Add Dataset`, highlight the blank cell by clicking on it. Click on the *10/01* button to select a specific data set.
 
-Choose the `Local` tab, and select the `call_drop_data_train.csv` file that you added to the project. Under the `Insert to code` option, click `Insert Pandas DataFrame`.
+* Select the `call_drop_data_train.csv` file that you added to the project. Under the `Insert to code` option, click `Insert Pandas DataFrame`.
 
 > **IMPORTANT**:  Ensure the variable name is set to `df_data_1`.
 
