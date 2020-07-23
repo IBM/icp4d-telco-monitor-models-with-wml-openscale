@@ -150,8 +150,10 @@ You will run cells individually by highlighting each cell, then either click the
   ![global_vars](/doc/src/images/global_vars.png)
   
   <details><summary><b>For WML on IBM Cloud Pak for Data users</b></summary>
-    * Enter the `Deployment Space` Associated for the project as created in Step 2.
-      ![global_vars_cpd](/doc/src/images/global_vars_cpd.png)
+  * Enter the `Deployment Space` Associated for the project as created in Step 2.
+  
+  ![global_vars_cpd](/doc/src/images/global_vars_cpd.png)
+  
   </details>
   
 * Under section `2.3 Add your WML Credentials`, add the credentials you had copied earlier when creating the Watson Machine Learning instance.
