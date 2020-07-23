@@ -53,9 +53,7 @@ In this code pattern we demonstrate a way to monitor your AI models in an applic
 1. [Display deployment in Watson OpenScale](#6-display-deployment-in-watson-openscale)
 1. [Additional use-case for Watson OpenScale](#7-additional-use-case-for-watson-openscale)
 
-### 1. Create a Watson Machine Learning instance
-
-<details><summary><b>IBM Cloud</b></summary>
+### 1. Create a Watson Machine Learning instance (ONLY FOR IBM CLOUD)
 
 * Create a new [Watson Machine Learning](https://cloud.ibm.com/catalog/services/machine-learning) instance on IBM Cloud. Log in to IBM Cloud or sign up for IBM Cloud if you don't have an account by following the on-screen instructions.
 
@@ -68,6 +66,9 @@ In this code pattern we demonstrate a way to monitor your AI models in an applic
   ![copy_cred](doc/src/gif/copycred.gif)
 
 > **NOTE**: Save the credentials. It will be required when running the notebook.
+
+
+
 
 ### 2. Create a new project in Cloud Pak for Data
 
