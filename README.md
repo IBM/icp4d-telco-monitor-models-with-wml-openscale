@@ -140,25 +140,24 @@ You will run cells individually by highlighting each cell, then either click the
 #### 4.3. Supply the neccessary variables and credentials
 
 <details><summary><b>For WML on IBM Cloud users</b></summary>
+  
 * Under section `2.1 Global Variables` enter the following:
 
-  * Your desired Model Name
-  * Your desired Model Deployment Name
-  * The name of an `empty` schema in your database
+  1. Your desired Model Name
+  2. Your desired Model Deployment Name
+  3. The name of an `empty` schema in your database
 
   > **Note** : Make sure you have an empty schema, i.e. it has no content.
   
-  ![global_vars](/doc/src/images/global_vars.png)
+ ![global_vars](/doc/src/images/global_vars.png)
   
 * Under section `2.3 Add your WML Credentials`, add the credentials you had copied earlier when creating the Watson Machine Learning instance.
   
-  ![wml_cred](/doc/src/images/wml_cred.png)
+ ![wml_cred](/doc/src/images/wml_cred.png)
   
-* Under section `2.4 Update your AIOS Credentials`, add the necessary Cloud Pak for Data instance details as instructed in the cell.
-
-  * Replace the <> with the information within the brackets.
+* Under section `2.4 Update your AIOS Credentials`, add the necessary Cloud Pak for Data instance details as instructed in the cell. Replace the <> with the information within the brackets.
   
-  ![aios_cred](/doc/src/images/aios_cred.png)
+ ![aios_cred](/doc/src/images/aios_cred.png)
   
 * Under section `2.5 Add your Db Credentials`, add your database credentials and make sure the keys given in the template have values filled in.
 
@@ -169,6 +168,7 @@ You will run cells individually by highlighting each cell, then either click the
 </details>
   
 <details><summary><b>For WML on IBM Cloud Pak for Data users</b></summary>
+  
 * Enter the `Deployment Space` Associated for the project as created in Step 2.
 
   ![global_vars_cpd](/doc/src/images/global_vars_cpd.png)
@@ -180,6 +180,7 @@ You will run cells individually by highlighting each cell, then either click the
   > **NOTE**: These credentials will **only** be used if you have **not** already configured your Watson OpenScale Datamart. As you will see in section `4.3 Setup the Datamart on AI OpenScale`, if the Datamart already exists, it will be used. If not, the notebook will create the Datamart, using these credentials to configure it.
 
 </details>
+
 
 #### 4.4 Add the Subscription ID
 
