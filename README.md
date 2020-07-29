@@ -114,12 +114,12 @@ You will run cells individually by highlighting each cell, then either click the
 
 > **NOTE**: For reference, we have included a completed notebook in the `/examples` directory of this repo. This version of the notebook includes all the executed steps and outputs. See [https://github.com/IBM/icp4d-telco-monitor-models-with-wml-openscale/blob/master/examples/Setup_your_AIOS_Dashboard-Example.jupyter-py36.ipynb](https://github.com/IBM/icp4d-telco-monitor-models-with-wml-openscale/blob/master/examples/Setup_your_AIOS_Dashboard-Example.jupyter-py36.ipynb)
 
-#### Install the Necessary Packages
+#### 4.1. Install the Necessary Packages
 
 * Click on the `Run` icon and install the necessary packages described in the first 3 cells.
 * Next, restart your kernel by either clicking the restart icon or `Kernel > Restart`.
 
-#### Add the Dataset
+#### 4.2. Add the Dataset
 
 * Download the dataset using this link- https://github.com/IBM/icp4d-telco-monitor-models-with-wml-openscale/blob/master/data/call_drop_data_train.csv . Right click on `Download` and click on `Save link as`. Save the file with .csv extension. 
 
@@ -137,8 +137,9 @@ You will run cells individually by highlighting each cell, then either click the
 
 > **IMPORTANT**:  Ensure the variable name is set to `df_data_1`.
 
-#### Supply the neccessary variables and credentials
+#### 4.3. Supply the neccessary variables and credentials
 
+<details><summary><b>For WML on IBM Cloud users</b></summary>
 * Under section `2.1 Global Variables` enter the following:
 
   * Your desired Model Name
@@ -149,35 +150,44 @@ You will run cells individually by highlighting each cell, then either click the
   
   ![global_vars](/doc/src/images/global_vars.png)
   
-  <details><summary><b>For WML on IBM Cloud Pak for Data users</b></summary>
-  * Enter the `Deployment Space` Associated for the project as created in Step 2.
-  
-  ![global_vars_cpd](/doc/src/images/global_vars_cpd.png)
-  
-  </details>
-  
 * Under section `2.3 Add your WML Credentials`, add the credentials you had copied earlier when creating the Watson Machine Learning instance.
-
+  
+  ![wml_cred](/doc/src/images/wml_cred.png)
+  
 * Under section `2.4 Update your AIOS Credentials`, add the necessary Cloud Pak for Data instance details as instructed in the cell.
 
   * Replace the <> with the information within the brackets.
-
+  
+  ![aios_cred](/doc/src/images/aios_cred.png)
+  
 * Under section `2.5 Add your Db Credentials`, add your database credentials and make sure the keys given in the template have values filled in.
+
+  ![db_cred](/doc/src/images/db_cred.png)
 
   > **NOTE**: These credentials will **only** be used if you have **not** already configured your Watson OpenScale Datamart. As you will see in section `4.3 Setup the Datamart on AI OpenScale`, if the Datamart already exists, it will be used. If not, the notebook will create the Datamart, using these credentials to configure it.
   
-### For CPD v2.5 users-
+</details>
+  
+<details><summary><b>For WML on IBM Cloud Pak for Data users</b></summary>
+* Enter the `Deployment Space` Associated for the project as created in Step 2.
 
-* Run all cells in the notebook till `4. Create a new Deployment Space`
-* After that follow the steps in the documentation to obtain the Deployment Space name and insert into the notebook cell
- ![enter dep name](/doc/src/images/dep_name.png)
- 
-* Run the rest of the notebook as per the rest of the instructions
+  ![global_vars_cpd](/doc/src/images/global_vars_cpd.png)
 
-#### Add the Subscription ID
+* Under section `2.5 Add your Db Credentials`, add your database credentials and make sure the keys given in the template have values filled in.
+
+  ![db_cred](/doc/src/images/db_cred.png)
+
+  > **NOTE**: These credentials will **only** be used if you have **not** already configured your Watson OpenScale Datamart. As you will see in section `4.3 Setup the Datamart on AI OpenScale`, if the Datamart already exists, it will be used. If not, the notebook will create the Datamart, using these credentials to configure it.
+
+</details>
+
+#### 4.4 Add the Subscription ID
 
 * Continue running the notebook up to section `4.5 Create a new Subscription`.
 * Before runnning the remaining cells (again, please keep in mind it is better run cell by cell), update the variable `subscription_id` in section `4.6 Perform Inital Payload Logging`, with the ID you created in the previous cell.
+  
+  ![subscription_table](/doc/src/images/subscription_table.png)
+  
 * You will find this id in the table above the cell, as instructed in the notebook.
 * Now, run the rest of the notebook to completion.
 
