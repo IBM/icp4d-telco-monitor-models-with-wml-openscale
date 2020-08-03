@@ -102,7 +102,11 @@ In this code pattern we demonstrate a way to monitor your AI models in an applic
 
    ![](doc/src/images/add_notebook.png)
    
-* You will be navigated to a new page. Click on the `From URL` tab and enter the url `<Insert URL>`. Enter the name `TowerA_Call_Drop` and click on the `Create` button.
+* You will be navigated to a new page. Click on the `From URL` tab.
+  * <b> For WML on Cloud Users </b> Use this URL - https://github.com/IBM/icp4d-telco-monitor-models-with-wml-openscale/blob/master/notebooks/OpenScale_WML_Cloud.ipynb
+  * <b> For WML on Cloud Pak for Data Users </b> Use this URL - https://github.com/IBM/icp4d-telco-monitor-models-with-wml-openscale/blob/master/notebooks/OpenScale_WML_CPD_3.0.ipynb
+  
+Enter the name `TowerA_Call_Drop` and click on the `Create` button.
   
   ![](doc/src/images/create_notebook.png)  
    
